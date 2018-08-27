@@ -8,7 +8,9 @@
                  [org.clojure/clojurescript "1.10.238"]
                  [re-frame "0.10.2"]]
 
-  :doo {:paths {:karma "./node_modules/karma/bin/karma"}}
+  :doo {:paths {:karma "./node_modules/karma/bin/karma"}
+        :build "tests"
+        :alias {:default [:chrome]}}
 
   :npm {:devDependencies [[karma "1.7.1"]
                           [karma-chrome-launcher "2.2.0"]
@@ -26,7 +28,7 @@
 
   :cljsbuild {:builds [{:id "tests"
                         :source-paths ["src" "test"]
-                        :compiler {:output-to "tests-output/tests.js"
-                                   :output-dir "tests-output"
+                        :compiler {:output-to "target/tests-output/tests.js"
+                                   :output-dir "target/tests-output"
                                    :main "district.ui.mobile.test-runner"
                                    :optimizations :none}}]})
