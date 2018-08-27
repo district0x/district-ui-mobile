@@ -11,7 +11,9 @@ module, that provides mobile integration.
 *There is nothing here... yet*
 
 
-## Tests
+## Development
+
+### Testing
 
 ```bash
 $ lein doo
