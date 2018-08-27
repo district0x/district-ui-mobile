@@ -9,3 +9,10 @@ module, that provides mobile integration.
 ## Usage
 
 *There is nothing here... yet*
+
+
+## Tests
+
+```bash
+$ lein doo
+```
