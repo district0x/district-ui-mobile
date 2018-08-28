@@ -1,7 +1,5 @@
 # district-ui-mobile
 
-*Alpha, Currently in Development*
-
 [![Build Status](https://travis-ci.org/district0x/district-ui-mobile.svg?branch=master)](https://travis-ci.org/district0x/district-ui-mobile)
 
 Clojurescript

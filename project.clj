@@ -1,4 +1,4 @@
-(defproject district-ui-mobile "0.1.0-SNAPSHOT"
+(defproject district0x/district-ui-mobile "1.0.0"
   :description "district UI module for mobile integration"
   :url "http://github.com/district0x/district-ui-mobile"
   :license {:name "Eclipse Public License"
