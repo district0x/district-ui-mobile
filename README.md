@@ -72,9 +72,9 @@ A more specific use-case, is determining if the device is
 
 - [district.ui.mobile](#districtuimobile)
 - [district.ui.mobile.subs](#districtuimobilesubs)
-  - [::android?](#mobile-subs--android?)
-  - [::ios?](#mobile-subs--ios?)
-  - [::coinbase-compatible?](#mobile-subs--coinbase-compatible?)
+  - [::android?](#android-)
+  - [::ios?](#ios-)
+  - [::coinbase-compatible?](#coinbase-compatible-)
 
 ## district.ui.mobile
 This namespace contains the `mobile`
