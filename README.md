@@ -33,7 +33,7 @@ Include `district.ui.mobile` within the main file where you call `mount/start`
 ```
 
 Subscriptions can then be made to determine if the web application is
-being viewed from mobile devices, specifically android or iOS devices.
+being viewed from mobile devices, specifically Android or iOS devices.
 
 ```clojure
 ;; re-frame view file
@@ -46,7 +46,7 @@ being viewed from mobile devices, specifically android or iOS devices.
     (fn []
      [:div
       (cond
-       @android? [:span "You are on an android device."]
+       @android? [:span "You are on an Android device."]
        @ios? [:span "You are on an iOS (iPhone, iPad) device."]
        :else [:span "We don't know if you're on a mobile device."])])))
 ```
@@ -60,12 +60,12 @@ A more specific use-case, is determining if the device is
 (require '[district.ui.mobile.subs :as mobile-subs])
 
 (defn coinbase-dialog []
-  (let [coinbase-compatible? (subscribe [::mobile-subs/coinbase-compatible])]
+  (let [coinbase-compatible? (subscribe [::mobile-subs/coinbase-compatible?])]
     (fn []
      [:div
       (if @coinbase-compatible?
-        [:span "Mobile device is coinbase compatible"]
-        [:span "Device is not coinbase compatible"])])))
+        [:span "Mobile device is coinbase compatible."]
+        [:span "Device is not coinbase compatible."])])))
 ```
 
 ## API Overview
@@ -105,7 +105,7 @@ For example, if I wanted to imitate an iOS device:
 re-frame subscriptions provided by this module:
 
 #### `::android? []`
-Returns `true` if an android mobile device is viewing the web
+Returns `true` if an Android mobile device is viewing the web
 application, otherwise `false`
 
 #### `::ios? []`
