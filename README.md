@@ -25,7 +25,7 @@ Include `district.ui.mobile` within the main file where you call `mount/start`
 (require '[mount.core :as mount])
 (require '[district.ui.mobile])
 
-;;optional initialization options
+;; optional initialization options
 (def district-ui-options
   {:mobile {:force-mobile-device false}})
 
@@ -33,7 +33,7 @@ Include `district.ui.mobile` within the main file where you call `mount/start`
 ```
 
 Subscriptions can then be made to determine if the web application is
-being viewed from mobile devices, specifically android or ios devices.
+being viewed from mobile devices, specifically android or iOS devices.
 
 ```clojure
 ;; re-frame view file
@@ -43,12 +43,12 @@ being viewed from mobile devices, specifically android or ios devices.
 (defn show-device []
   (let [android? (subscribe [::mobile-subs/android?])
         ios? (subscribe [::mobile-subs/ios?])]
-	(fn []
+    (fn []
      [:div
-	  (cond
-	   @android? [:span "You are on an android device."]
-	   @ios? [:span "You are on an iOS (iPhone, iPad) device."]
-	   :else [:span "We don't know if you're on a mobile device."])])))
+      (cond
+       @android? [:span "You are on an android device."]
+       @ios? [:span "You are on an iOS (iPhone, iPad) device."]
+       :else [:span "We don't know if you're on a mobile device."])])))
 ```
 
 A more specific use-case, is determining if the device is
@@ -62,16 +62,16 @@ A more specific use-case, is determining if the device is
 (defn coinbase-dialog []
   (let [coinbase-compatible? (subscribe [::mobile-subs/coinbase-compatible])]
     (fn []
-	 [:div
-	  (if @coinbase-compatible?
-	    [:span "Mobile device is coinbase compatible"]
-		[:span "Device is not coinbase compatible"])])))
+     [:div
+      (if @coinbase-compatible?
+        [:span "Mobile device is coinbase compatible"]
+        [:span "Device is not coinbase compatible"])])))
 ```
 
 ## API Overview
 
-- [district.ui.mobile](#api-district-ui-mobile)
-- [district.ui.mobile.subs](#api-district-ui-mobile-subs)
+- [district.ui.mobile](#districtuimobile)
+- [district.ui.mobile.subs](#districtuimobilesubs)
   - [::android?](#mobile-subs--android?)
   - [::ios?](#mobile-subs--ios?)
   - [::coinbase-compatible?](#mobile-subs--coinbase-compatible?)
@@ -91,28 +91,28 @@ For example, if I wanted to imitate an iOS device:
 (ns my-district.core
  (:require [mount.core :as mount]
            [district.ui.mobile]
-		   ;;...
-		   ))
+           ;;...
+           ))
 
 (-> (mount/with-args
      {:mobile {:force-mobile-device :ios}
-	  ;; Additional mount options...
-	  })
+      ;; Additional mount options...
+      })
     (mount/start))
 ```
 
 ## district.ui.mobile.subs
 re-frame subscriptions provided by this module:
 
-#### <a name="mobile-subs--android?>`::android? []`
+#### `::android? []`
 Returns `true` if an android mobile device is viewing the web
 application, otherwise `false`
 
-#### <a name="mobile-subs--ios?>`::ios? []`
+#### `::ios? []`
 Returns `true` if an iOS mobile device (iPhone, iPad) is viewing the
 web application, otherwise `false`.
 
-#### <a name="mobile-subs--coinbase-compatible?>`::coinbase-compatible? []`
+#### `::coinbase-compatible? []`
 Returns `true` if an coinbase-compatible mobile device is viewing the
 web application, otherwise `false`.
 
