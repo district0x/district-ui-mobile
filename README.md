@@ -7,7 +7,7 @@ Clojurescript
 module, that provides mobile integration.
 
 ## Installation
-Add `[district0x/district-ui-mobile "0.1.0-SNAPSHOT"]` into your
+Add `[district0x/district-ui-mobile "1.0.0"]` into your
 project.clj
 
 ## Quickstart
