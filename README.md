@@ -51,7 +51,7 @@ being viewed from mobile devices, specifically Android or iOS devices.
        :else [:span "We don't know if you're on a mobile device."])])))
 ```
 
-A more specific use-case, is determining if the device is
+Another use-case is determining if the device is
 [coinbase](https://wallet.coinbase.com/)-compatible.
 
 ```clojure
